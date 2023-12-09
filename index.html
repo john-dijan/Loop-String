@@ -31,6 +31,7 @@
           <button onclick="loopStr()">Make</button>
       </p>
       <h3 id="msg"></h3>
+      <button style="display: none" onclick="navigator.clipboard.writeText(document.getElementById('msg').innerText); alert('Copied')">Copy</button>
 	</div>
 </div>
 
@@ -46,23 +47,9 @@
         	let str = '';
         	for (let i = 0; i < num.value; i++) {
                 str+=txt.value.replace(/\n/g, '<br>') + '<br>';
-                //str+= txt.value;
-                //msg.innerHTML+=txt.value.replace(/\n/g, '<br>');
             }
             msg.innerHTML = str;
-            setTimeout(()=>{
-				let cc = msg.innerText.includes(txt.value).length;
-            	console.log(msg.innerText.includes(txt.value))
-            }, 1000);
+        	document.getElementsByTagName('button')[1].style.display='';
         }
-        //msg.innerHTML=str.replace(/\n/g, '<br>');
-        
-        /*if (txt.value !== '' && num.value !== '') {
-        	for (let i = 0; i < num.value; i++) {
-            	msg.innerHTML = txt.textContent; 
-            }
-        } else {
-        	alert('Helllo')
-        }*/
     }
 </script>
