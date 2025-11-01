@@ -29,9 +29,9 @@
       <input type="text" id="quantity" placeholder="Quantity...">
       <p>
           <button onclick="loopStr()">Make</button>
+		  <button style="display: none" onclick="navigator.clipboard.writeText(document.getElementById('msg').innerText); alert('Copied')">Copy</button>
       </p>
       <h3 id="msg"></h3>
-      <button style="display: none" onclick="navigator.clipboard.writeText(document.getElementById('msg').innerText); alert('Copied')">Copy</button>
 	</div>
 </div>
 
